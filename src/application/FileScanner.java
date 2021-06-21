@@ -26,11 +26,18 @@ public class FileScanner
 	private BufferedReader mReader = null;
 	private boolean mPoemStart = false;
 	private StringBuilder mPoem = null;
+	private String mFilePath = null;
+	
+	public Map<String, Integer> returnWordDictionary()
+	{
+		return mWordDictionary;
+	}
 	
 	public FileScanner(String path)
 	{
 		try
 		{
+			mFilePath = path;
 			mReader = new BufferedReader(new FileReader(path));
 			mPoem = new StringBuilder();
 			String mLine = mReader.readLine();
@@ -67,7 +74,7 @@ public class FileScanner
 		
 		
 		SaveWords();
-		PrintWords();
+	   //PrintWords();
 		
 	}
 	
@@ -121,7 +128,6 @@ public class FileScanner
 		
 		new Alert(Alert.AlertType.INFORMATION, "Your file has been processed successfully!").show();
 	}
-	
 	
 	
 	

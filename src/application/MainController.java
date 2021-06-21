@@ -62,7 +62,7 @@ public class MainController {
     	
     }
     
-    public boolean verifyFile(String mFilePath)
+    public static boolean verifyFile(String mFilePath)
     {
     	try {
 			BufferedReader mReader = new BufferedReader(new FileReader(mFilePath));

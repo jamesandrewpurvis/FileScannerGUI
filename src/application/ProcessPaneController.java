@@ -8,8 +8,8 @@ public class ProcessPaneController {
     private ListView<String> mListBox;
     
 
-    public void updateList(String test)
+    public void updateList(String item)
     {
-    	mListBox.getItems().add(test);
+    	mListBox.getItems().add(item);
     }
 }
