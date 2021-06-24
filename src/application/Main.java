@@ -7,9 +7,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * Static class that exists as an entry point for our application.
+ * @author James Purvis
+ * @version 1.0
+ *
+ */
 
 public class Main extends Application {
+	/**
+	 * @param primaryStage
+	 * This method helps us setup the "stage" for our application, so that we can show the GUI to end-user.
+	 */
 	@Override
+	
+	
+	
+	
 	public void start(Stage primaryStage) {
 		try {
 			primaryStage.setTitle("FileScanner GUI");
@@ -23,6 +37,10 @@ public class Main extends Application {
 		}
 	}
 	
+	/**
+	 * This method is our application's entry point.
+	 * @param args Arguments used for intialization of our application.
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

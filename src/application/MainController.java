@@ -20,17 +20,38 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * This class contains logic for our MainController. The MainController is the first GUI seen when the application is launched.
+ * @author James Purvis
+ * @version 1.0
+ */
 public class MainController {
 
-    @FXML
+	
+   /**
+    * This member is the TextField that contains the file-path to the Poem.html file.
+    */
     private TextField mProcessField;
-
-    @FXML
+    
+    
+    /**
+     * This member contains the button used to process the Poem.html file.
+     */
+    
     private Button mProcessButton;
+    
+    
+    /**
+     * This member contains an instance of our ProcessPaneController. (The second GUI shown)
+     */
     
     public static ProcessPaneController mControllerInstance = null;
 
-    @FXML
+    /**
+     * This method is where our ActionEvent button press takes place. Our method grabs the filePath that the user provided, and then verifies if it's valid. If so, the application continues.
+     * @param event 
+     * @throws IOException 
+     */
     void buttonPress(ActionEvent event) throws IOException {
     	
     	String mFilePath = mProcessField.getText();
@@ -62,6 +83,12 @@ public class MainController {
     	
     }
     
+    /**
+     * This method verifies if a file path is valid or not. 
+     * @param mFilePath
+     * The specified FilePath
+     * @return boolean
+     */
     public static boolean verifyFile(String mFilePath)
     {
     	try {
